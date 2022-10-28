@@ -37,6 +37,7 @@ footer{
 
 .container-item{
     margin: 0 auto;
+    margin-top: 10px;
     width: 800px;
     background-color: var(--marronechiaro);
 }
@@ -55,4 +56,10 @@ footer{
 
 .container-icon{
     text-align: right;
+}
+
+.icon-check:hover, .icon-cross:hover{
+    cursor: pointer;
+    background-color: var(--marronescuro);
+    transition: background-color 1s linear;
 }
