@@ -1,4 +1,58 @@
+/* PALETTE COLORI */
+:root{
+    --biancosporco: #FFF8EA;
+    --marronechiaro: #9E7676;
+    -marrone: #815B5B;
+    --marronescuro: #594545;
+}
+
 /* GENERAL */
 body{
     font-family: 'PT Sans', sans-serif;
+    color: var(--biancosporco);
+}
+
+.myContainer{
+    margin: 0 auto;
+    height: 100vh;
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    background-color: var(--marronechiaro);
+}
+
+main{
+    height: calc(100% - 130px);
+    padding-top: 20px;
+}
+
+footer{
+    height: 50px;
+    width: 100%;
+    background-color: var(--marronechiaro);
+
+}
+
+.container-item{
+    margin: 0 auto;
+    width: 800px;
+    background-color: var(--marronechiaro);
+}
+
+.icon-check, .icon-cross{
+    border: 1px solid var(--biancosporco);
+    color: var(--biancosporco);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-icon{
+    text-align: right;
 }

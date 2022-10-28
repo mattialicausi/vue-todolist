@@ -10,13 +10,39 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.min.js"></script>
     <script src="./js/script.js" defer></script>
     <title>Vue To Do List</title>
 </head>
 <body>
     <div id="app">
-        
+        <div class="myContainer">
+            <header class="d-flex justify-content-center align-items-center">
+                    <h1>To do List</h1>
+            </header>
+           
+            <main>
+                <div class="container-item d-flex align-items-center p-3">
+                    <div class="item col-6">fare spesa</div>
+
+                    <div class="container icon col-6 d-flex justify-content-end">
+                       <div class="icon-check" >
+                           <i class="fa-solid fa-check"></i>
+                       </div>
+                       <div class="icon-cross d-none">
+                            <i class="fa-solid fa-xmark"></i>
+                       </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="d-flex align-items-center p-2">
+                MADE BY MATTIA LI CAUSI
+            </footer>
+            
+            
+           
+        </div>
     </div>
     
 </body>
