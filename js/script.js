@@ -36,7 +36,8 @@ const app = createApp({
      },
      removeTask(i){
         this.lista.splice(i, 1);
-     }
+     },
+   
      
     },
     mounted(){
