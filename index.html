@@ -16,36 +16,24 @@
 </head>
 <body>
     <div id="app">
-        <div class="myContainer">
-            <header class="d-flex justify-content-center align-items-center">
-                    <h1>To do List</h1>
-            </header>
-           
-            <main>
-                <div class="container-item d-flex align-items-center p-3">
-                    
-                    <div class="item col-6">fare spesa</div>
-
-                    <div class="container icon col-6 d-flex justify-content-end">
-                       <div class="icon-check" >
-                           <i class="fa-solid fa-check"></i>
-                       </div>
-                       <div class="icon-cross d-none">
-                            <i class="fa-solid fa-xmark"></i>
-                       </div>
-                    </div>
-                   
-                </div>
-                
-            </main>
-
-            <footer class="d-flex align-items-center p-2">
-                MADE BY MATTIA LI CAUSI
-            </footer>
-            
-            
-           
+        <div class="containerUser">
+            <h1>To do List</h1>
+            <input type="text" name="" id="" placeholder="Inserisci nuova task"
+            v-model="newtask" @keyup.enter ="addTask">
+            <button @click="addTask" class="rounded-pill">Aggiungi</button>
         </div>
+
+        <div v-if="hasError" class="alertError">Devi digitare almeno 4 caratteri</div>
+       
+        <ul>
+            <li v-for="(item, index) in lista" :key="index">
+                <span>{{item}}</span>
+                <span @click="removeTask(index)"><i class="fa-solid fa-check"></i></span>
+            </li>
+        </ul>
+
+            
+           
     </div>
     
 </body>

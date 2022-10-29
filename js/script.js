@@ -12,31 +12,31 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
 
 const {createApp} = Vue;
 
-
-const array = [
-    {
-      
-    }, {
-   
-    
-    }, {
-
-
-    }, {
-
-    }
-];
-
 //creo app
 const app = createApp({
     data(){
         return {
-          
+        newtask :'',
+        hasError: false,
+        lista:[
+        
+          ]
 
         }
     },
     methods: {
-   
+     addTask(){
+        if(this.newtask.length >= 4){
+            this.lista.unshift(this.newtask);
+            this.hasError = false;
+        } else{
+            this.hasError = true;
+        }
+        this.newtask=''; 
+     },
+     removeTask(i){
+        this.lista.splice(i, 1);
+     }
      
     },
     mounted(){
