@@ -16,12 +16,16 @@
 </head>
 <body>
     <div id="app">
+
+            <!-- HEADER -->
+
         <div class="header">
             <div class="container-title">
                 <h1>Promemoria di cose da fare </h1> 
             </div>
-
         </div>
+
+            <!-- USER ITEMS -->
 
         <div class="userItems d-flex justify-content-around">
             <input class="userInput" type="text" name="" id="" placeholder="Inserisci promemoria"
@@ -29,10 +33,14 @@
             <div @click="addTask" class="rounded-pill btnUser">Aggiungi</div>
         </div>
             
+             <!-- DIV ALERT  -->
+
         <div v-if="hasError" class="alertError d-flex justify-content-center rounded-pill p-2">
             Devi digitare almeno 4 caratteri!
         </div>
        
+            <!-- SEZIONE PROMEMORIA -->
+
         <div class="container-promemoria">
              <ul v-if="lista.length > 0">
                 <li v-for="(item, index) in lista" :key="index" @click="checkedTask" class="promemoria">
@@ -44,12 +52,11 @@
 
                 </li>
             </ul>
+
+            <!-- SPAWN PROMEMORIA VUOTO -->
         <div v-else class="spawnUtente">Non hai niente da fare!</div>   
         </div>
-
-
-            
-           
+         
     </div>
     
 </body>

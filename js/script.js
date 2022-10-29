@@ -21,10 +21,10 @@ const app = createApp({
         isActive: false,
         activeIndex: 0,
         lista:[]
-
         }
     },
     methods: {
+
      addTask(){
         if(this.newtask.length >= 4){
             this.lista.unshift(this.newtask);
@@ -34,20 +34,17 @@ const app = createApp({
         }
         this.newtask=''; 
      },
+
      removeTask(i){
         this.lista.splice(i, 1);
      },
+
      checkedTask(){
         // this.activeIndex = index;
         this.isActive = !this.isActive;
      }
    
-     
     },
-    mounted(){
-       console.log(this.activeIndex)
 
-
-    }
 });
 app.mount('#app');
