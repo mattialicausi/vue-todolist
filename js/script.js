@@ -19,9 +19,8 @@ const app = createApp({
         newtask :'',
         hasError: false,
         isActive: false,
-        lista:[
-        
-          ]
+        activeIndex: 0,
+        lista:[]
 
         }
     },
@@ -39,13 +38,15 @@ const app = createApp({
         this.lista.splice(i, 1);
      },
      checkedTask(){
+        // this.activeIndex = index;
         this.isActive = !this.isActive;
      }
    
      
     },
     mounted(){
-       
+       console.log(this.activeIndex)
+
 
     }
 });

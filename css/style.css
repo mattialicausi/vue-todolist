@@ -48,6 +48,14 @@ body{
     margin-top: 10px;
 }
 
+.userInput{
+    background-color: var(--azzurro);
+    color: white;
+    border: 1px solid white;
+    outline: none;
+}
+::-webkit-input-placeholder { color: #fff;}
+
 /* MODIFICO ALERT ERROR */
 
 .alertError{
