@@ -1,14 +1,116 @@
 /* PALETTE COLORI */
 :root{
-    --biancosporco: #FFF8EA;
-    --marronechiaro: #9E7676;
-    -marrone: #815B5B;
-    --marronescuro: #594545;
+    --verdeAcqua: #7DE5ED;
+    --lightblue: #81C6E8;
+    --azzurro: #5DA7DB;
+    --viola: #5837D0;
 }
 
 /* GENERAL */
 body{
     font-family: 'PT Sans', sans-serif;
     color: black;
+    background-color: var(--verdeAcqua);
 }
 
+.header{
+    width: 100%;
+    height: 80px;
+    color: white;
+    background-color: var(--azzurro);  
+}   
+
+.container-title{
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.btnUser{
+    background-color: var(--azzurro);
+    padding: 10px;
+    color: white;
+}
+
+.btnUser:hover{
+    cursor: pointer;
+    opacity: 0.75;
+    transition: opacity 1s linear;
+}
+
+/* MODIFICO SEZIONE USER */
+.userItems{
+    margin: 0 auto;
+    width: 400px;
+    margin-top: 10px;
+}
+
+/* MODIFICO ALERT ERROR */
+
+.alertError{
+    margin: 0 auto;
+    background-color: red;
+    color: white;
+    width: 400px;
+    margin-top: 20px;
+}
+
+/* MODIFICO SEZIONE PROMEMORIA */
+
+.promemoria, .spawnUtente{
+    list-style: none;
+    margin: 0 auto;
+    width: 800px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--azzurro);
+    display: flex;
+    justify-content: start;
+    position: relative;
+}
+
+.spawnUtente{
+    color: white;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.container-item{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.croce{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.checked-Utente, .croce{
+    color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.checked-Utente{
+    height: 30px;
+    width: 30px;
+}
+
+.item{
+    color: white;
+}
+
+.checkColor{
+    background-color: lightgreen;
+}

@@ -18,7 +18,7 @@ const app = createApp({
         return {
         newtask :'',
         hasError: false,
-        isActive: true,
+        isActive: false,
         lista:[
         
           ]
