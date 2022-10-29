@@ -26,10 +26,10 @@
         <div v-if="hasError" class="alertError">Devi digitare almeno 4 caratteri</div>
        
         <ul v-if="lista.length > 0">
-            <li v-for="(item, index) in lista" :key="index">
+            <li v-for="(item, index) in lista" :key="index" @click="checkedTask">
                 <span>{{item}}</span>
                 <span @click="removeTask(index)"><i class="fa-solid fa-xmark"></i></span>
-                <span class="checked-Utente d-none"><i class="fa-solid fa-check"></i></span>
+                <span class="checked-Utente" :class="{'d-none': isActive}" ><i class="fa-solid fa-check"></i></span>
             </li>
         </ul>
         <div v-else class="spawnUtente">Non hai niente da fare</div>

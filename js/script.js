@@ -18,6 +18,7 @@ const app = createApp({
         return {
         newtask :'',
         hasError: false,
+        isActive: true,
         lista:[
         
           ]
@@ -37,6 +38,9 @@ const app = createApp({
      removeTask(i){
         this.lista.splice(i, 1);
      },
+     checkedTask(){
+        this.isActive = !this.isActive;
+     }
    
      
     },
