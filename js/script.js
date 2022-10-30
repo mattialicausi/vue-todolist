@@ -20,30 +20,54 @@ const app = createApp({
         hasError: false,
         isActive: false,
         activeIndex: 0,
-        lista:[]
+        lista:[
+            {
+                text: 'Fare la spesa',
+                done: false,
+             },
+             {
+                text: 'Prendere croccantini per il cane',
+                done: false,
+            },
+            {
+                text: 'Fare benzina',
+                done: false,
+            }
+        ]
         }
     },
     methods: {
 
      addTask(){
-        if(this.newtask.length >= 4){
-            this.lista.unshift(this.newtask);
+        let textNew = this.newtask
+        let newtodo = Object();
+        newtodo.text = textNew;
+        newtodo.done = false;
+
+        if(textNew.length >= 4){
+            this.lista.unshift(newtodo);
             this.hasError = false;
         } else{
             this.hasError = true;
         }
         this.newtask=''; 
+        console.log(textNew)
+        console.log(newtodo)
      },
 
      removeTask(i){
         this.lista.splice(i, 1);
      },
 
-     checkedTask(){
-        // this.activeIndex = index;
-        this.isActive = !this.isActive;
+     checkedTask(i){
+
+        this.lista[i].done = !this.lista[i].done;
+        console.log(this.lista[i].done)
      }
    
+    },
+    mounted(){
+       
     },
 
 });

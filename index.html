@@ -28,8 +28,8 @@
             <!-- USER ITEMS -->
 
         <div class="userItems d-flex justify-content-around">
-            <input class="userInput" type="text" name="" id="" placeholder="Inserisci promemoria"
-            v-model="newtask" @keyup.enter ="addTask">
+            <input v-model="newtask" class="userInput" type="text" name="" id="" placeholder="Inserisci promemoria"
+             @keyup.enter ="addTask">
             <div @click="addTask" class="rounded-pill btnUser">Aggiungi</div>
         </div>
             
@@ -43,10 +43,10 @@
 
         <div class="container-promemoria">
              <ul v-if="lista.length > 0">
-                <li v-for="(item, index) in lista" :key="index" @click="checkedTask" class="promemoria">
+                <li v-for="(item, index) in lista" :key="index" class="promemoria">
                     <div class="container-item">
-                        <span class="item">{{item}}</span>
-                        <span class="checked-Utente" :class="{'checkColor': isActive}" ><i class="fa-solid fa-check"></i></span>
+                        <span class="item">{{lista[index].text}}</span>
+                        <span class="checked-Utente" :class="lista[index].done === true ? 'checkColor' : ''" @click="checkedTask(index)" ><i class="fa-solid fa-check"></i></span>
                     </div>
                         <span class="croce" @click="removeTask(index)"><i class="fa-solid fa-xmark"></i></span>
 
